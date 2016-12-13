@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Here are the top three!</h1>
+                {% for business in businesses %}
+                    {{ business.name, business.rating, business.phone }}
+                {% endfor %}
+                <a href="{{ url_for('index') }}">Back to Homepage</a>
+                <a href="{{ url_for('about') }}">About this project</a>
+            </div>
+        </div>
+    </body>
+</html>
